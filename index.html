@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coach Jeff — Athlete / Coach</title>
+  <meta name="description" content="Clean one‑page site for an athlete/coach: bio, highlights, schedule, media, contact." />
+  <meta name="theme-color" content="#0b0b10" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <style>
+    :root{
+      --bg:#0b0b10;--text:#e8e8f0;--muted:#b6b6c7;--card:#12121a;--stroke:#27273a;
+      --brand:#34d399;--accent:#a78bfa;--radius:16px;--shadow:0 10px 30px rgba(0,0,0,.35);--maxw:1100px
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 system-ui,-apple-system,Segoe UI,Inter,Roboto,"Noto Sans",sans-serif;overflow-x:hidden}
+    a{color:inherit}
+    .container{max-width:var(--maxw);margin-inline:auto;padding:24px}
+    header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,rgba(11,11,16,.95),rgba(11,11,16,.65));backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--stroke)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;gap:10px;align-items:center;text-decoration:none}
+    .logo{inline-size:36px;block-size:36px;border-radius:50%;background:conic-gradient(from 0deg,var(--brand),var(--accent),#34d399,var(--brand))}
+    .brand h1{font-size:18px;margin:0;font-weight:800}
+    nav ul{display:flex;gap:12px;list-style:none;margin:0;padding:0}
+    nav a{padding:10px 12px;border-radius:10px;color:var(--muted);text-decoration:none}
+    nav a:hover{background:rgba(34,211,238,.12);color:var(--text)}
+    .cta{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:linear-gradient(135deg,var(--brand),#34d399);color:#111;font-weight:800;text-decoration:none}
+    .card{background:var(--card);border:1px solid var(--stroke);border-radius:var(--radius);box-shadow:var(--shadow);max-width:100%}
+    section{padding:56px 0;border-top:1px solid var(--stroke)}
+    h2{font-size:42px;line-height:1.15;margin:0 0 8px}
+    h3{font-size:28px;margin:0 0 8px}
+    .sub{color:var(--muted);margin:0 0 18px}
+    .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center}
+    .hero .media{aspect-ratio:16/10;border-radius:14px;overflow:hidden}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .badge{padding:6px 10px;border:1px dashed #3b3b56;border-radius:999px;color:var(--muted)}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .hl{padding:16px}
+    .hl h4{margin:6px 0}
+    .hl p{margin:0;color:var(--muted)}
+    table{width:100%;border-collapse:collapse;border:1px solid var(--stroke);display:block;overflow-x:auto}
+    th,td{border-bottom:1px solid var(--stroke);padding:12px;text-align:left}
+    th{background:#0f0f17}
+    .media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .media-grid img{width:100%;height:220px;object-fit:cover;border-radius:12px;border:1px solid var(--stroke)}
+    form{display:grid;gap:12px}
+    input,textarea{padding:12px 14px;border:1px solid var(--stroke);background:#0e0e15;color:var(--text);border-radius:12px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    button,.cta,a.cta{min-height:44px}
+    footer{padding:28px 24px;color:var(--muted);text-align:center;border-top:1px solid var(--stroke)}
+    @media (max-width:980px){.hero .wrap{grid-template-columns:1fr}.grid3,.media-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){nav ul{display:none}.grid3,.media-grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}h2{font-size:34px}}
+    @media (max-width:420px){h2{font-size:28px;line-height:1.2}.cta{padding:10px 12px;font-weight:700}.container{padding:16px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#"><span class="logo"></span><h1>Coach Jeff • Athlete / Coach</h1></a>
+      <nav><ul>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul></nav>
+      <a class="cta" href="#contact">Book / Contact</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container wrap">
+        <div class="card" style="padding:22px">
+          <h2>Speed • Strength • Smart training.</h2>
+          <p class="sub">Professional athlete & coach focused on <em>sprint mechanics • strength & conditioning • youth development</em>. Available for clinics, private coaching, and brand partnerships.</p>
+          <a class="cta" href="#highlights">See highlights →</a>
+          <div class="badges">
+            <span class="badge">Pro since 2019</span>
+            <span class="badge">Based in San Francisco, CA</span>
+            <span class="badge">Travel available</span>
+          </div>
+        </div>
+        <div class="card media">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80&w=1600&auto=format&fit=crop" alt="Action photo"/>
+        </div>
+      </div>
+    </section>
+    <section id="highlights">
+      <div class="container">
+        <h3>Highlights</h3>
+        <div class="grid3">
+          <div class="card hl">
+            <h4>National Sprint Cup — 200m Finalist (2023)</h4>
+            <p>Top‑8 finish; season best 21.49. Mentored youth relay team to podium.</p>
+          </div>
+          <div class="card hl">
+            <h4>Coach — 1:1 & Clinics</h4>
+            <p>Speed development, S&C periodization, return‑to‑play progression.</p>
+          </div>
+          <div class="card hl">
+            <h4>Brand Partnerships</h4>
+            <p>Open to spikes/apparel testing, content features, community events.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="schedule">
+      <div class="container">
+        <h3>Schedule</h3>
+        <div class="card" style="overflow:auto">
+          <table>
+            <thead><tr><th>Date</th><th>Event</th><th>Location</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Oct 05</td><td>Speed Clinic (U16)</td><td>Berkeley, CA</td><td>20 spots</td></tr>
+              <tr><td>Oct 26</td><td>Pre‑Season Testing</td><td>San Mateo, CA</td><td>Invite only</td></tr>
+              <tr><td>Nov 16</td><td>Coaches Workshop</td><td>San Jose, CA</td><td>Warm‑ups & drills</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section id="media">
+      <div class="container">
+        <h3>Media</h3>
+        <div class="media-grid">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1200&auto=format&fit=crop" alt="Track training"/>
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop" alt="Competition"/>
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80&w=1200&auto=format&fit=crop" alt="Coaching"/>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <h3>Booking & Contact</h3>
+        <p class="sub">Use the form or email <a href="mailto:coach.jeff@example.com">coach.jeff@example.com</a></p>
+        <form class="card" onsubmit="event.preventDefault(); window.location.href='mailto:coach.jeff@example.com';">
+          <div class="row">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="topic">Topic</label>
+              <input id="topic" name="topic" placeholder="Coaching / Event / Partnership" />
+            </div>
+            <div>
+              <label for="time">Preferred time</label>
+              <input id="time" name="time" placeholder="e.g., weekday evenings" />
+            </div>
+          </div>
+          <div>
+            <label for="msg">Message</label>
+            <textarea id="msg" name="message" rows="4" placeholder="Tell me your goals…"></textarea>
+          </div>
+          <div class="row">
+            <button class="cta" type="submit">Send inquiry</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <small>© <script>document.write(new Date().getFullYear())</script> Coach Jeff. All rights reserved.</small>
+  </footer>
+</body>
+</html>
